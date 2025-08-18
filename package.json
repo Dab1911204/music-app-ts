@@ -9,14 +9,19 @@
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "experss": "^0.0.1-security"
-  },
   "devDependencies": {
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.0",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.1",
+    "pug": "^3.0.3",
+    "tinymce": "^8.0.2",
+    "unidecode": "^1.1.0"
   }
 }
