@@ -1,0 +1,27 @@
+header.header
+    .container
+        .row.align-items-center
+            .col-2
+                .inner-logo
+                    a(href="/" class="text-decoration-none")
+                        img(src="/images/logo.svg" alt="Logo") 
+            .col-5 
+                .box-search
+                    form(action="/search/result" method="GET" class="form-search")
+                        div(class="form-group d-flex mb-0")
+                            input(type="text" placeholder="Tìm kiếm bài hát" name="keyword" value=keyword class="form-control")
+                            button(type="submit" class="btn btn-primary")
+                                i(class="fa-solid fa-magnifying-glass")
+                    .inner-suggest
+                        .inner-list
+            .col-5
+                .inner-menu
+                    ul 
+                        li 
+                            a(href="/" class="text-decoration-none") <i class="fa-solid fa-home"></i> Home
+                        li 
+                            a(href="/topics" class="text-decoration-none") <i class="fa-solid fa-music"></i> Chủ đề
+                        li 
+                            a(href="/farovite-songs" class="text-decoration-none") <i class="fa-solid fa-heart"></i> Yêu thích
+
+

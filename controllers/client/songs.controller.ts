@@ -40,7 +40,6 @@ export const detail = async (req: Request, res: Response) => {
         status: "active",
         deleted: false
     })
-
     const singer = await Singer.findOne({
         _id: song.singerId,
         deleted: false

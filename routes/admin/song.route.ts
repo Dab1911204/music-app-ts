@@ -12,5 +12,10 @@ routes.post('/create',upload.fields([
     {name: 'avatar', maxCount: 1},
     {name: 'audio', maxCount: 1}
 ]),uploadCloud.uploadFiles,controller.createPost)
+routes.get('/edit/:id',controller.edit)
+routes.patch('/edit/:id',upload.fields([
+    {name: 'avatar', maxCount: 1},
+    {name: 'audio', maxCount: 1}
+]),uploadCloud.uploadFiles,controller.editPatch)
 
 export const songRoutes:Router = routes;

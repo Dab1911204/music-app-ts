@@ -13,7 +13,6 @@ export const uploadSinger = async (req:Request, res:Response, next:NextFunction)
 };
 
 export const uploadFiles = async (req:Request, res:Response, next:NextFunction) => {
-    console.log(req["files"])
     for(const key in req["files"]){
         req.body[key] = [];
         const array = req["files"][key]

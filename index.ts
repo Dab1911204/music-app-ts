@@ -2,6 +2,7 @@ import express,{Express} from 'express'
 import dotenv from 'dotenv';
 import path from 'path';
 import bodyParser from 'body-parser';
+import methodOverride from 'method-override';
 import * as database from "./config/database"
 import clientRouters from './routes/client/index.route';
 import adminRouters from './routes/admin/index.route';
@@ -14,13 +15,14 @@ database.connect()
 const app:Express = express()
 const port:Number|String = process.env.PORT || 3000
 
+app.use(methodOverride('_method'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static('public'))
+app.use(express.static(`${__dirname}/public`))
 
 app.set('view engine', 'pug')
-app.set('views', './views')
+app.set('views', `${__dirname}/views`)
 
 //TinyMCE
 app.use('/tinymce', express.static(path.join(__dirname, 'node_modules', 'tinymce')));
